@@ -4,9 +4,9 @@ import http from 'k6/http'
 // See https://k6.io/docs/using-k6/options
 export const options = {
   stages: [
-    { duration: '1m', target: 20 },
-    { duration: '3m', target: 20 },
-    { duration: '1m', target: 0 },
+    { duration: '2s', target: 1000 },
+    { duration: '2s', target: 1000 },
+    { duration: '2s', target: 0 },
   ],
   thresholds: {
     http_req_failed: ['rate<0.02'], // http errors should be less than 2%
